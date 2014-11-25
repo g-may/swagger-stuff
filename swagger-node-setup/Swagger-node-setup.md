@@ -7,7 +7,6 @@
 # Setting up Swagger-UI with node.js
 
 
-
 1. Install [node.js]
 2. Download the [swagger-node-express] package from github ("Download ZIP" on the right) and extract the files.
 3. Open a command line tool and navigate to `/swagger-node-express-master/sample-application`
@@ -15,9 +14,11 @@
 5. Run the application with the command `node app.js` 
 6. View the doc at http://localhost:8002/docs
 
+
+
 ### Displaying your own Swagger documentation
 ##### Local Static Files
-If you don't have them already, write up some JSON files to describe your API using [Swagger Specification 1.2].
+If you don't have them already, write up some JSON files to describe your API using [Swagger Specification 1.2]. You can use the files in [my sample ui] to get started, or if you don't want to write your own.
 
 Make a new folder in the sample-application folder (I called mine "mydocs") and move all of your API Declaration files into it.
 
@@ -51,6 +52,7 @@ If you want your docs to appear when the UI loads, open /swagger-node-express-ma
 32  }
 ```
 You can set this URL to point to an external Swagger Resource Listing too.
+
 ##### Pointing to externally hosted Swagger files
 The Resource Listing for the Swagger pet store demo is hosted at this URL:
 ```
@@ -60,6 +62,7 @@ If you type this into the URL bar at the top of your local UI, you should see th
 
 To view external docs by default in your local UI, set the "url" parameter in index.html line 31 to the external Resource Listing's URL. 
 
+[my sample ui]:https://github.com/ten1010/swagger-stuff/tree/master/swagger-node-setup/swagger-node-express-master/sample-application/mydocs
 [Swagger Specification 1.2]:https://github.com/swagger-api/swagger-spec/blob/master/versions/1.2.md
 [node.js]:http://nodejs.org
 [swagger-node-express]:http://github.com/swagger-api/swagger-node-express
