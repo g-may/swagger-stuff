@@ -18,7 +18,7 @@
 
 ### Displaying your own Swagger documentation
 ##### Local Static Files
-If you don't have them already, write up some JSON files to describe your API using [Swagger Specification 1.2]. You can use the files in [my sample ui] to get started, or if you don't want to write your own.
+If you don't have them already, write up some JSON files to describe your API using [Swagger Specification 1.2]. You can use the files in [my sample ui] to get started or if you don't want to write your own.
 
 Make a new folder in the sample-application folder (I called mine "mydocs") and move all of your API Declaration files into it.
 
