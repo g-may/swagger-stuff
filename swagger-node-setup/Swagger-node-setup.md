@@ -53,7 +53,7 @@ If you want your docs to appear when the UI loads, open /swagger-node-express-ma
 ```
 You can set this URL to point to an external Swagger Resource Listing too.
 
-##### Pointing to externally hosted Swagger files
+##### Externally hosted files
 The Resource Listing for the Swagger pet store demo is hosted at this URL:
 ```
 http://petstore.swagger.wordnik.com/api/api-docs
