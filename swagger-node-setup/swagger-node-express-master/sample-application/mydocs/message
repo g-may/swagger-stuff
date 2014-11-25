@@ -1,0 +1,118 @@
+{
+  "swaggerVersion":"1.2",
+  "basePath": "https://imaginary.messageservice.com/restapi",
+  "models": 
+  {
+    "message": {
+      "id": "message",
+      "required": ["senderID","recipientID","content","private"],
+      "properties": {
+        "senderID": {
+          "type": "string",
+          "description": "Sender's ID"
+        },
+        "recipientID": {
+          "type": "string",
+          "description": "Recipient's ID"
+        },
+        "content": {
+          "type": "string",
+          "description": "Content of the message"
+        },
+        "messageID": {
+          "type": "string",
+          "description": "Unique identifier assigned to the message after it's created"
+        },
+        "private": {
+          "type": "boolean",
+          "description": "'true' if the message is only viewable by the sender and recipient -- 'false' if the message is publicly viewable"
+        }
+      }
+    }
+  },
+  "apis": [
+    {
+      "path": "/message",
+      "description": "Operations for managing messages",  
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Create a new message",
+          "consumes": [
+            "application/json"
+          ],
+          "nickname": "createMessage",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "JSON object containing sender, recipient, and message content",
+              "required": true,
+              "type": "message",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "The request cannot be fulfilled due to bad syntax."
+            }
+          ]
+        },
+        {
+          "method": "GET",
+          "summary": "Get information about an existing message",
+          "nickname": "getMessage",
+          "parameters": [
+            {
+              "name": "messageID",
+              "description": "unique message identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 403,
+              "message": "You do not have authorization to view this private message"
+            }
+          ]
+        },
+        {
+          "method": "PUT",
+          "summary": "Edit the content of an existing message",
+          "nickname": "editMessage",
+          "parameters": [
+            {
+              "name": "body",
+              "description": "Updated message and content",
+              "required": true,
+              "type": "message",
+              "paramType": "body"
+            }
+          ]
+        },
+        {
+          "method": "DELETE",
+          "summary": "Delete a message you created or received",
+          "nickname": "deleteMessage",
+          "parameters": [
+            {
+              "name": "messageID",
+              "description": "Message identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "query"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 403,
+              "message": "You do not have authorization to delete this message"
+            }
+          ]
+        }
+      ]
+    }  
+  ]
+}
