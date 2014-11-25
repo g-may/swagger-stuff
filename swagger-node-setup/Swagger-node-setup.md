@@ -42,7 +42,7 @@ app.get('/mydocs', function(req, res, next) {
 
 (Replace "mydocs" with the name of your new folder in sample-application)
 
-After you've saved your files, you should be able to view your docs at http://localhost:8002/mydocs.
+After you've saved your files, you should be able to view your docs by typing http://localhost:8002/docs into the URL bar at the top of your sample application.
 
 If you want your docs to appear when the UI loads, open /swagger-node-express-master/swagger-ui/index.html and edit the default URL to point to your Resource Listing:
 ```
@@ -50,7 +50,7 @@ If you want your docs to appear when the UI loads, open /swagger-node-express-ma
 31    url = "http://localhost:8002/mydocs"
 32  }
 ```
-You can set this URL to point to an external Swagger Resource Listing as long as that server has given your app cross-origin resource sharing permissions.
+You can set this URL to point to an external Swagger Resource Listing too.
 ##### Pointing to externally hosted Swagger files
 The Resource Listing for the Swagger pet store demo is hosted at this URL:
 ```
