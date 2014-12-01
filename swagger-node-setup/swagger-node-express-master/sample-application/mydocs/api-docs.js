@@ -3,7 +3,7 @@ module.exports = {
   "apis": [
     {
       "path": "/message",
-      "description": "Create, read, update, and delete messages sent between users"
+      "description": "Create, read, update, and delete messages sent between users."
     }
   ]
 }
