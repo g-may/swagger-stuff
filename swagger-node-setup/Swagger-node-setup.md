@@ -18,7 +18,7 @@
 
 ### Displaying your own Swagger documentation
 ##### Local static files
-If you don't have them already, write up some JSON files to describe your API using [Swagger Specification 1.2]. You can use the files in [my sample ui] to get started or if you don't want to write your own.
+If you don't have them already, write up some JSON files to describe your API using [Swagger Specification 1.2]. You will end up with a Resource Listing and at least one API Declaration. If you're just curious about the process and don't want to write files of your own, you can use the files from [my sample ui]. 
 
 Make a new folder in the sample-application folder (I called mine "mydocs") and move all of your API Declaration files into it.
 
@@ -32,7 +32,7 @@ module.exports = {
     ...(the rest of your Resource Listing)
 }
 ```
-To expose these files with your node application, you'll need to edit the "app.js" file in the sample-application folder. Open it, and somewhere around line 123 add this code:
+To expose these files from your node application, you'll need to edit the "app.js" file in the sample-application folder. Open it, and somewhere around line 123 add this code:
 ```
 app.use('/mydocs/', express.static(__dirname + '/mydocs/'));
 app.get('/mydocs', function(req, res, next) {
