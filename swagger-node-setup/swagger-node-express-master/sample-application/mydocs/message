@@ -25,7 +25,7 @@
         },
         "private": {
           "type": "boolean",
-          "description": "'true' if the message is only viewable by the sender and recipient -- 'false' if the message is publicly viewable"
+          "description": "'true' if the message is only viewable by the sender and recipient - 'false' if the message is publicly viewable"
         }
       }
     }
